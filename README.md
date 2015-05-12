@@ -6,7 +6,7 @@
 ## Examples
 
 ### Some string methods:
-```obj
+```objective-c
 NSString *str1 = [@"  abc  " strip];                   //=> "abc"
 NSString *str2 = [@"ab 123 ba" trimmingChars:@"ab "];  //=> "123"
 NSArray *array = [@"1, 2, 3, 4" split:@", "];          //=> ["1", "2", "3", "4"]
@@ -16,7 +16,7 @@ BOOL isEmptyStr = [@"" isEmpty];                                //=> YES
 ```
 
 ### gsub methods:
-```obj
+```objective-c
 // example 1
 NSRegularExpression *regex1 = [NSRegularExpression regularExpressionWithPattern:@"[aeiou]" options:0 error:nil];
 NSString *str = [@"hello" gsub:regex1 replacement:@"*"]);  //=> "h*ll*"
@@ -34,17 +34,16 @@ NSRegularExpression *regex4 = [NSRegularExpression regularExpressionWithPattern:
 NSString *upcaseStr = [@"hello" gsub:regex4 block:^(NSString *match){
     return [match uppercaseString];
 }];  //=> "HELLO"
-
 ```
 
 ### match methods:
-```obj
+```objective-c
 NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(.)\\1" options:0 error:nil];
 NSString *firstMatchStr = [@"hello" match:regex block:^(NSString *match){ return match; }];  //=> "ll"
 ```
 
 ### scan methods:
-```obj
+```objective-c
 // example 1
 NSRegularExpression *regex1 = [NSRegularExpression regularExpressionWithPattern:@"\\w+" options:0 error:nil];
 NSArray *array1 = [@"cruel world" scan:regex1]);  //=> [["cruel"], ["world"]]
@@ -60,7 +59,6 @@ NSRegularExpression *regex8 = [NSRegularExpression regularExpressionWithPattern:
 }];
 //=> ["crue", "cr", "ue"]
 //=> ["l wo", "l ", "wo"]
-
 ```
 
 
