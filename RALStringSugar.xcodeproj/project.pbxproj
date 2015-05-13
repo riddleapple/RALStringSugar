@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6A2B80F41B038E9200BE23E3 /* RALStringSugarTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2B80F31B038E9200BE23E3 /* RALStringSugarTestCase.m */; };
+		6A2B80F81B03918D00BE23E3 /* RALMatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF8F581B020105006D3CBD /* RALMatchResult.m */; };
+		6A2B80F91B03919200BE23E3 /* NSString+RALStringSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF8F531B020029006D3CBD /* NSString+RALStringSugar.m */; };
 		6AAF8F4A1B01FEEC006D3CBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF8F491B01FEEC006D3CBD /* main.m */; };
 		6AAF8F541B020029006D3CBD /* NSString+RALStringSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF8F531B020029006D3CBD /* NSString+RALStringSugar.m */; };
 		6AAF8F591B020105006D3CBD /* RALMatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF8F581B020105006D3CBD /* RALMatchResult.m */; };
@@ -197,6 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A2B80F91B03919200BE23E3 /* NSString+RALStringSugar.m in Sources */,
+				6A2B80F81B03918D00BE23E3 /* RALMatchResult.m in Sources */,
 				6A2B80F41B038E9200BE23E3 /* RALStringSugarTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
