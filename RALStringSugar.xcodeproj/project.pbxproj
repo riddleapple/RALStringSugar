@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A2B80F41B038E9200BE23E3 /* RALStringSugarTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2B80F31B038E9200BE23E3 /* RALStringSugarTestCase.m */; };
 		6AAF8F4A1B01FEEC006D3CBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF8F491B01FEEC006D3CBD /* main.m */; };
 		6AAF8F541B020029006D3CBD /* NSString+RALStringSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF8F531B020029006D3CBD /* NSString+RALStringSugar.m */; };
 		6AAF8F591B020105006D3CBD /* RALMatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF8F581B020105006D3CBD /* RALMatchResult.m */; };
@@ -25,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A2B80EF1B038E9200BE23E3 /* RALStringSugarTestCase.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RALStringSugarTestCase.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A2B80F21B038E9200BE23E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A2B80F31B038E9200BE23E3 /* RALStringSugarTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RALStringSugarTestCase.m; sourceTree = "<group>"; };
 		6AAF8F461B01FEEC006D3CBD /* RALStringSugar */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RALStringSugar; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAF8F491B01FEEC006D3CBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6AAF8F521B020029006D3CBD /* NSString+RALStringSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RALStringSugar.h"; sourceTree = "<group>"; };
@@ -34,6 +38,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6A2B80EC1B038E9200BE23E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AAF8F431B01FEEC006D3CBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,10 +55,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A2B80F01B038E9200BE23E3 /* RALStringSugarTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				6A2B80F31B038E9200BE23E3 /* RALStringSugarTestCase.m */,
+				6A2B80F11B038E9200BE23E3 /* Supporting Files */,
+			);
+			path = RALStringSugarTestCase;
+			sourceTree = "<group>";
+		};
+		6A2B80F11B038E9200BE23E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A2B80F21B038E9200BE23E3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6AAF8F3D1B01FEEC006D3CBD = {
 			isa = PBXGroup;
 			children = (
 				6AAF8F481B01FEEC006D3CBD /* RALStringSugar */,
+				6A2B80F01B038E9200BE23E3 /* RALStringSugarTestCase */,
 				6AAF8F471B01FEEC006D3CBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				6AAF8F461B01FEEC006D3CBD /* RALStringSugar */,
+				6A2B80EF1B038E9200BE23E3 /* RALStringSugarTestCase.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +113,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6A2B80EE1B038E9200BE23E3 /* RALStringSugarTestCase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A2B80F71B038E9200BE23E3 /* Build configuration list for PBXNativeTarget "RALStringSugarTestCase" */;
+			buildPhases = (
+				6A2B80EB1B038E9200BE23E3 /* Sources */,
+				6A2B80EC1B038E9200BE23E3 /* Frameworks */,
+				6A2B80ED1B038E9200BE23E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RALStringSugarTestCase;
+			productName = RALStringSugarTestCase;
+			productReference = 6A2B80EF1B038E9200BE23E3 /* RALStringSugarTestCase.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6AAF8F451B01FEEC006D3CBD /* RALStringSugar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AAF8F4D1B01FEEC006D3CBD /* Build configuration list for PBXNativeTarget "RALStringSugar" */;
@@ -109,6 +156,9 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Riddle Ling";
 				TargetAttributes = {
+					6A2B80EE1B038E9200BE23E3 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 					6AAF8F451B01FEEC006D3CBD = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -127,11 +177,30 @@
 			projectRoot = "";
 			targets = (
 				6AAF8F451B01FEEC006D3CBD /* RALStringSugar */,
+				6A2B80EE1B038E9200BE23E3 /* RALStringSugarTestCase */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		6A2B80ED1B038E9200BE23E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		6A2B80EB1B038E9200BE23E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A2B80F41B038E9200BE23E3 /* RALStringSugarTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AAF8F421B01FEEC006D3CBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +214,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		6A2B80F51B038E9200BE23E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RALStringSugarTestCase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6A2B80F61B038E9200BE23E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RALStringSugarTestCase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		6AAF8F4B1B01FEEC006D3CBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -239,6 +340,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6A2B80F71B038E9200BE23E3 /* Build configuration list for PBXNativeTarget "RALStringSugarTestCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A2B80F51B038E9200BE23E3 /* Debug */,
+				6A2B80F61B038E9200BE23E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		6AAF8F411B01FEEC006D3CBD /* Build configuration list for PBXProject "RALStringSugar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -255,6 +364,7 @@
 				6AAF8F4F1B01FEEC006D3CBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
