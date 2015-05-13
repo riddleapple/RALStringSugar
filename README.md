@@ -5,7 +5,7 @@
 
 ## Examples
 
-### Some string methods:
+#### Some string methods:
 ```objective-c
 NSString *str1 = [@"  abc  " strip];                   //=> "abc"
 NSString *str2 = [@"ab 123 ba" trimmingChars:@"ab "];  //=> "123"
@@ -15,7 +15,7 @@ BOOL isIncludeStr = [@"python, ruby, swift" isInclude:@"ruby"]; //=> YES
 BOOL isEmptyStr = [@"" isEmpty];                                //=> YES
 ```
 
-### gsub methods:
+#### gsub methods:
 ```objective-c
 // example 1
 NSRegularExpression *regex1 = [NSRegularExpression regularExpressionWithPattern:@"[aeiou]" options:0 error:nil];
@@ -36,13 +36,13 @@ NSString *upcaseStr = [@"hello" gsub:regex4 block:^(NSString *match){
 }];  //=> "HELLO"
 ```
 
-### match methods:
+#### match method:
 ```objective-c
 NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(.)\\1" options:0 error:nil];
 NSString *firstMatchStr = [@"hello" match:regex block:^(NSString *match){ return match; }];  //=> "ll"
 ```
 
-### scan methods:
+#### scan methods:
 ```objective-c
 // example 1
 NSRegularExpression *regex1 = [NSRegularExpression regularExpressionWithPattern:@"\\w+" options:0 error:nil];
@@ -53,8 +53,8 @@ NSRegularExpression *regex2 = [NSRegularExpression regularExpressionWithPattern:
 NSArray *array2 = [@"cruel world" scan:regex2]);  //=> [["crue", "cr", "ue"], ["l wo", "l ", "wo"]]
 
 // example 3
-NSRegularExpression *regex8 = [NSRegularExpression regularExpressionWithPattern:@"(..)(..)" options:0 error:nil];
-[@"cruel world" scan:regex8 block:^(RALMatchResult* matchResult){
+NSRegularExpression *regex3 = [NSRegularExpression regularExpressionWithPattern:@"(..)(..)" options:0 error:nil];
+[@"cruel world" scan:regex3 block:^(RALMatchResult* matchResult){
 	NSLog(@"%@", matchResult.group);
 }];
 //=> ["crue", "cr", "ue"]
