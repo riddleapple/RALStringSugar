@@ -41,6 +41,7 @@
 - (NSArray *)split:(NSString *)separator;
 - (BOOL)isInclude:(NSString *)string;
 - (BOOL)isEmpty;
+- (NSString *)toCamelCase;
 
 
 /**

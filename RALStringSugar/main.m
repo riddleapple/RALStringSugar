@@ -13,16 +13,18 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSLog(@"%@", [@"  abc  " strip]);
-        NSLog(@"%@", [@"ab 123 ba" trimmingChars:@"ab "]);
-        NSLog(@"%@", [@"1, 2, 3, 4" split:@", "]);
+        NSLog(@"%@", [@"  abc  " strip]);                   //=> "abc"
+        NSLog(@"%@", [@"ab 123 ba" trimmingChars:@"ab "]);  //=> "123"
+        NSLog(@"%@", [@"1, 2, 3, 4" split:@", "]);          //=> [1, 2, 3, 4]
+        NSLog(@"%@", [@"date_of_birth" toCamelCase]);       //=> "dateOfBirth"
         
         NSString *langStr = @"ruby";
         if ([@"python, ruby, swift" isInclude:langStr]) {
             NSLog(@"\"python, ruby, swift\" include %@", langStr);
+            //=> "python, ruby, swift" include ruby
         }
         
-        NSLog(@"%d", [@"" isEmpty]);
+        NSLog(@"%d", [@"" isEmpty]);  //=> YES
         
         
         // gsub example 1

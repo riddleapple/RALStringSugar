@@ -56,6 +56,11 @@
     XCTAssertEqual(isEmpty, YES);
 }
 
+- (void)testToCamelCase {
+    XCTAssertEqualObjects([@"date_of_birth" toCamelCase], @"dateOfBirth");
+}
+
+
 - (void)testGsub {
     NSRegularExpression *regex = [NSRegularExpression
                                   regularExpressionWithPattern:@"[aeiou]"

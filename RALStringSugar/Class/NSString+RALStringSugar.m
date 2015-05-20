@@ -61,6 +61,18 @@
     return NO;
 }
 
+- (NSString *)toCamelCase {
+    NSArray *array = [self split:@"_"];
+    NSMutableString *resultString = [NSMutableString string];
+    
+    [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop){
+        NSString *str = (idx > 0) ? [obj capitalizedString] : obj;
+        [resultString appendString:str];
+    }];
+    
+    return resultString;
+}
+
 
 - (NSString *)gsub:(NSRegularExpression *)regex replacement:(NSString *)replacement {
     return [regex stringByReplacingMatchesInString:self
