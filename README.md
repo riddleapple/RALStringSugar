@@ -9,7 +9,8 @@
 ```objective-c
 NSString *str1 = [@"  abc  " strip];                   //=> "abc"
 NSString *str2 = [@"ab 123 ba" trimmingChars:@"ab "];  //=> "123"
-NSArray *array = [@"1, 2, 3, 4" split:@", "];          //=> ["1", "2", "3", "4"]
+NSString *str3 = [@"date_of_birth" toCamelCase]        //=> "dateOfBirth"
+NSArray *array = [@"1, 2, 3" split:@", "];             //=> ["1", "2", "3"]
 
 BOOL isIncludeStr = [@"python, ruby, swift" isInclude:@"ruby"]; //=> YES
 BOOL isEmptyStr = [@"" isEmpty];                                //=> YES
