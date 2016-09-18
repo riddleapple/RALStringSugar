@@ -2,6 +2,14 @@
 
  Some methods additions for NSString. Ruby style.
 
+## Usage
+
+1. Add `NSString+RALStringSugar.h`, `NSString+RALStringSugar.m`, `RALMatchResult.h`, `RALMatchResult.m` to your project.
+
+2. Import the header file:
+```
+#import "NSString+RALStringSugar.h"
+```
 
 ## Examples
 
@@ -24,11 +32,11 @@ NSString *str = [@"hello" gsub:regex1 replacement:@"*"]);  //=> "h*ll*"
 	
 // example 2
 NSRegularExpression *regex2 = [NSRegularExpression regularExpressionWithPattern:@"([aeiou])" options:0 error:nil];
-NSString *str =[@"hello" gsub:regex2 replacement:@"<$1>"]);  //=> "h<e>ll<o>"
+NSString *str =[@"hello" gsub:regex2 replacement:@"<$1>"];  //=> "h<e>ll<o>"
 	
 // example 3
 NSRegularExpression *regex3 = [NSRegularExpression regularExpressionWithPattern:@"y((.)(.)\\3\\2) d\\1" options:0 error:nil];
-NSString *str = [@"yabba dabba doo" gsub:regex3 replacement:@"-"]);  //=> "- doo"
+NSString *str = [@"yabba dabba doo" gsub:regex3 replacement:@"-"];  //=> "- doo"
 
 // example 4
 NSRegularExpression *regex4 = [NSRegularExpression regularExpressionWithPattern:@"." options:0 error:nil];
@@ -47,11 +55,11 @@ NSString *firstMatchStr = [@"hello" match:regex block:^(NSString *match){ return
 ```objective-c
 // example 1
 NSRegularExpression *regex1 = [NSRegularExpression regularExpressionWithPattern:@"\\w+" options:0 error:nil];
-NSArray *array1 = [@"cruel world" scan:regex1]);  //=> [["cruel"], ["world"]]
+NSArray *array1 = [@"cruel world" scan:regex1];  //=> [["cruel"], ["world"]]
 
 // example 2
 NSRegularExpression *regex2 = [NSRegularExpression regularExpressionWithPattern:@"(..)(..)" options:0 error:nil];
-NSArray *array2 = [@"cruel world" scan:regex2]);  //=> [["crue", "cr", "ue"], ["l wo", "l ", "wo"]]
+NSArray *array2 = [@"cruel world" scan:regex2];  //=> [["crue", "cr", "ue"], ["l wo", "l ", "wo"]]
 
 // example 3
 NSRegularExpression *regex3 = [NSRegularExpression regularExpressionWithPattern:@"(..)(..)" options:0 error:nil];
