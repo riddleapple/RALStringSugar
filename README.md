@@ -28,7 +28,7 @@ BOOL isEmptyStr = [@"" isEmpty];                                //=> YES
 ```objective-c
 // example 1
 NSRegularExpression *regex1 = [NSRegularExpression regularExpressionWithPattern:@"[aeiou]" options:0 error:nil];
-NSString *str = [@"hello" gsub:regex1 replacement:@"*"]);  //=> "h*ll*"
+NSString *str = [@"hello" gsub:regex1 replacement:@"*"];  //=> "h*ll*"
 	
 // example 2
 NSRegularExpression *regex2 = [NSRegularExpression regularExpressionWithPattern:@"([aeiou])" options:0 error:nil];
