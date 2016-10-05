@@ -17,6 +17,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@", [@"ab 123 ba" trimmingChars:@"ab "]);  //=> "123"
         NSLog(@"%@", [@"1, 2, 3, 4" split:@", "]);          //=> [1, 2, 3, 4]
         NSLog(@"%@", [@"date_of_birth" toCamelCase]);       //=> "dateOfBirth"
+        NSLog(@"%@", [@"Hello!" toMD5]);                    //=> "952d2c56d0485958336747bcdd98590d"
         
         NSString *langStr = @"ruby";
         if ([@"python, ruby, swift" isInclude:langStr]) {

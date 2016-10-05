@@ -18,6 +18,7 @@
 NSString *str1 = [@"  abc  " strip];                   //=> "abc"
 NSString *str2 = [@"ab 123 ba" trimmingChars:@"ab "];  //=> "123"
 NSString *str3 = [@"date_of_birth" toCamelCase]        //=> "dateOfBirth"
+NSString *str4 = [@"Hello!" toMD5];                    //=> "952d2c56d0485958336747bcdd98590d"
 NSArray *array = [@"1, 2, 3" split:@", "];             //=> ["1", "2", "3"]
 
 BOOL isIncludeStr = [@"python, ruby, swift" isInclude:@"ruby"]; //=> YES

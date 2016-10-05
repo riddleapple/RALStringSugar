@@ -29,6 +29,7 @@
 
 
 #import "NSString+RALStringSugar.h"
+#import <CommonCrypto/CommonCrypto.h>
 
 
 
@@ -59,6 +60,20 @@
         return YES;
     }
     return NO;
+}
+
+- (NSString *)toMD5 {
+    const char *cStr = [self UTF8String];
+    unsigned char digest[16];
+    CC_MD5(cStr, (CC_LONG)strlen(cStr), digest);
+    NSMutableString *resultString = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    
+    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+    {
+        [resultString appendFormat:@"%02x", digest[i]];
+    }
+    
+    return resultString;
 }
 
 - (NSString *)toCamelCase {
